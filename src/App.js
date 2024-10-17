@@ -1,20 +1,3 @@
-// import "./App.css";
-// import Main from "./pages/main/Main";
-// //test commit 1.1
-// function App() {
-//   return (
-    // <>
-    //   <div className="min-vh-100">
-    //     <Main />
-    //     localStorage.setItem('greetingDisplayed', 'false');
-    //   </div>
-    // </>
-//   );
-// }
-
-// export default App;
-
-
 import React, { useState, useEffect } from 'react';
 import "./App.css";
 import Main from "./pages/main/Main";
@@ -24,28 +7,29 @@ import FooterNav from './components/FooterNav';
 import './App.css';
 import chatIcon from './assets/2.png';
 
+//function to ensure df-messenger is loaded
+function waitForMessengerToLoad(callback) {
+  const checkMessenger = setInterval(() => {
+    const dfMessenger = document.querySelector('df-messenger');
+    if (dfMessenger) {
+      clearInterval(checkMessenger);  // Stop checking when df-messenger is found
+      callback(dfMessenger);  // calling the function when the element is ready
+    }
+  }, 100);  //every 100 milliseconds
+}
 
-//test commit 1.1
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activePage, setActivePage] = useState('home'); // Track active page
 
-  // Automatically open the Dialogflow Messenger when "Messages" is selected
   useEffect(() => {
-    const dfMessenger = document.querySelector('df-messenger');
-
-    // Ensure the df-messenger is available and manipulate it properly
-    if (dfMessenger) {
-      if (activePage === 'messages') {
-        // Add the 'opened' attribute to open the chat window
-        dfMessenger.setAttribute('opened', 'true');
-      } else {
-        // Remove the 'opened' attribute to close the chat window
-        dfMessenger.removeAttribute('opened');
+    waitForMessengerToLoad(() => {
+      // useeffect for df-messenger loaded for safe 
+      if (!sessionStorage.getItem('df-messenger-chatBubbleExpansion')) {
+        sessionStorage.setItem('df-messenger-chatBubbleExpansion', 'true');
       }
-      dfMessenger.renderCustomText('G day! I am Mr Journaler, your virtual agent. How can I help you today?');
-    }
-  }, [activePage]); // This will run whenever activePage changes
+    });
+  }, []);
 
   const renderContent = () => {
     switch (activePage) {
@@ -53,8 +37,7 @@ const App = () => {
         return (
           <div className="messages-page">
             <div>Messages Page</div>
-
-            {/* Render Dialogflow Messenger component */}
+            {/* Load Dialogflow Messenger dynamically */}
             <df-messenger
               project-id="journaler-ai-bot"
               agent-id="3b287d4f-cdaf-4e85-aceb-a8a0eea1c905"
@@ -64,17 +47,16 @@ const App = () => {
               chat-title="Mr Journaler"
               placeholder-text="Type a reply..."
               bot-writing-text="Writing..."
-              expanded="true">
+              expanded="true"
+              >
               <df-messenger-chat-bubble
                expanded="true"
                chat-title-icon="/2.png"
                chat-title="Mr Journaler"
                placeholder-text="Type a reply..."
                bot-writing-text="Writing...">
-                
-             </df-messenger-chat-bubble>
+              </df-messenger-chat-bubble>
             </df-messenger>
-
           </div>
         );
 
@@ -115,13 +97,9 @@ const App = () => {
       </div>
       <div className="min-vh-100">
         <Main />
-        localStorage.setItem('greetingDisplayed', 'false');
       </div>
     </div>
-    
   );
 };
 
 export default App;
-
-

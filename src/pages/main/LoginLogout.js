@@ -13,9 +13,7 @@ const LoginLogout = () => {
     localStorage.removeItem("transaction");
     setUsername(null);
     //CHATBOT - dialogflow code ammendments
-    localStorage.setItem('greetingDisplayed', 'false');
-    //sessionStorage.removeItem('df-messenger-sessionID');
-    //
+    window.dispatchEvent(new Event('resetChatbot'));
   };
   const getActiveUser = () => {
     if (username !== null) {

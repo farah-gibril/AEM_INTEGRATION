@@ -36,6 +36,15 @@ const Main = () => {
   const { username, loginUser, logout, getActiveUser } = LoginLogout();
   //if initdata changes -> call use effect to store the products in the local storage again
   const [initProducts, setInitProducts] = useState(getData("Products") || null);
+
+  //CHATBOT - dialogflow ammendments
+  if (!sessionStorage.getItem('greetingUser')) {
+    sessionStorage.setItem('greetingUser', 'false');
+  }
+  // if (!sessionStorage.getItem('df-messenger-chatBubbleExpansion')) {
+  //   sessionStorage.setItem('df-messenger-chatBubbleExpansion', 'true');
+  // }
+
   useEffect(() => {
     if (localStorage.getItem("Products") === null) {
       const init = initProductData();
