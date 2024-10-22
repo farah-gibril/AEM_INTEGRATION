@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container-fluid justify-content-start ms-5 me-5 mt-0">
         <ul className="navbar nav">
           <NavItem content="Home" linkto="/" />
-          <NavItem content="User Tickets" linkto="/aemAdmin" />
+          <NavItem content="Support Tickets" linkto="/aemAdmin" />
           <NavItem content="Document Manager" linkto="/documentEditor" />
         </ul>
       </div>
