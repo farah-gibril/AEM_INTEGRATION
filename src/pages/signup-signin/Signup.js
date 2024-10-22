@@ -71,6 +71,22 @@ function SignUp(props) {
     localStorage.setItem("activeUser", JSON.stringify(newUser)); // Set active user in localStorage
     setIsSignedUp(true); // Set sign-up status to true
 
+    const aemUser = {
+      id: 967,
+      name: "Don",
+      lastName: "Abeynayake",
+      email: "test@gmail",
+      phone: "459340691",
+      role: "CEO",
+      country: "AU",
+      timezone: "AUSTRALIA_SYDNEY",
+      businessName: "Rightx",
+      currentAuthority: "user",
+      accountType: "account"
+    }
+    localStorage.setItem('aemUser', JSON.stringify(aemUser));
+    console.log('aemUser saved to localStorage:', aemUser);
+
     // Redirect to home page after a short delay
     setTimeout(() => {
       props.loginUser(newUser.name); // Call loginUser prop function
@@ -83,9 +99,9 @@ function SignUp(props) {
       <div className="row">
         <div className="col-md-6">
           <h3 className="mb-3" style={{ color: "red" }}>
-            Sign Up
+            SIGN UP
           </h3>
-          <h5 style={{ fontStyle: "italic" }}>for new deals</h5>
+          <h5 style={{ fontStyle: "italic" }}>Get started with our optimised crypto accounting solution with Mr. Journaler.</h5>
           <form>
             <div className="form-group mb-3">
               <label htmlFor="name">Name</label>

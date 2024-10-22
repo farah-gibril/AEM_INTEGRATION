@@ -47,12 +47,6 @@ const Header = (props) => {
                 <Link to="/profile" className={"ms-4 header-item-style me-4"}>
                   <i className="fi fi-rs-user-pen"></i> Profile
                 </Link>
-                {/* <Link to="/cart" className={"header-item-style me-4"}>
-                  <i className="fi fi-rr-shopping-cart "></i> Cart
-                  {props.cart.length > 0 ? (
-                    <span className="items-cart">{props.cart.length} </span>
-                  ) : null}
-                </Link> */}
                 <Link
                   to="/login"
                   onClick={props.logout}
@@ -65,7 +59,8 @@ const Header = (props) => {
           </ul>
         </div>
       </nav>
-      <Navbar />
+      {props.username !== null && <Navbar />}
+      {/* <Navbar /> */}
     </>
   );
 };

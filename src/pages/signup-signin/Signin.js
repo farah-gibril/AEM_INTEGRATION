@@ -60,7 +60,7 @@ function SignIn(props) {
       <div className="row justify-content-center">
         <div className="col-lg-4 col-md-6 col-sm-8">
           <div className="text-center mb-4 mt-5">
-            <h2>Welcome back</h2>
+            <h2>SIGN IN</h2>
           </div>
           <form>
             <div className="form-group">
