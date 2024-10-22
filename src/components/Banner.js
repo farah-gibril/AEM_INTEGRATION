@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 //Banner with image,text and link
 const Banner = ({
   img,
-  text = "Organic product specials & small-scale farming",
+  text = "Your virtual crypto accountant Mr Journaler is almost here",
   linkto,
 }) => {
   return (

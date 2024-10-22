@@ -8,9 +8,8 @@ const Navbar = () => {
       <div className="container-fluid justify-content-start ms-5 me-5 mt-0">
         <ul className="navbar nav">
           <NavItem content="Home" linkto="/" />
-          <NavItem content="Special Deals" linkto="/special" />
-          <NavItem content="Shop Online" linkto="/shop-online" />
-          <NavItem content="Diet Plan" linkto="/dietplanpage" />
+          <NavItem content="User Tickets" linkto="/aemAdmin" />
+          <NavItem content="Document Manager" linkto="/documentEditor" />
         </ul>
       </div>
     </nav>
