@@ -13,7 +13,7 @@ const Banner = ({
         <div className="banner-image flex-fill">
           <img
             className="rounded-3"
-            src="banner2.png"
+            src="MrJournalerFront1.png"
             alt=""
             style={{ width: "300px", height: "250px" }}
           />

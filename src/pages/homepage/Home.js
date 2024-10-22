@@ -18,20 +18,17 @@ const Home = ({ items, handleClick }) => {
   return (
     <div>
       <Heading
-        title="We're passionate about offering you the finest selection of organic goods."
-        subtitle="Every product on our shelves is carefully curated to ensure that you're getting the best quality, flavor, and nutrition while supporting environmentally-friendly practices."
+        title="Bringing the future of crypto accounting to you"
+        subtitle="Our integrated accounting app lets you track your crypto wallets and reconcile transaction data in seconds."
       />
-      <CarouselSection />
+      <div style={{position:"relative", top:0, width:"100%", zIndex:-1}}>
+        <CarouselSection />
+      </div>
+      
       <Banner
-        text="Organic product specials & small-scale farming"
+        text="Your virtual crypto accountant Mr Journaler is almost here"
         linkto="/special"
       />
-      <SectionHeader
-        title="Most Popular Products..."
-        link="/shop-online"
-        subtitle="View all products"
-      />
-      <ProductList list={showMostPopular} handleClick={handleClick} />
     </div>
   );
 };

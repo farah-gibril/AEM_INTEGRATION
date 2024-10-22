@@ -3,7 +3,7 @@ import Navbar from "../navbar/Navbar";
 import "./header.css";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/MrJournalerFront1.png";
 
 const Header = (props) => {
   return (
@@ -11,7 +11,7 @@ const Header = (props) => {
       <nav className="navbar navbar-light header-nav py-4">
         <div className="container-fluid justify-space-between ms-5 me-5">
           <Link to="/" className="soil-logo navbar-brand me-5">
-            <h1 className="soil-logo d-inline">SOIL</h1>
+            <h1 className="soil-logo d-inline">AEM Journaler</h1>
             <img src={logo} alt="" style={{ width: "100px" }} />
           </Link>
           <form action="">
@@ -19,7 +19,7 @@ const Header = (props) => {
               <input
                 className="form-control py-2 border-right-0 rounded-pill"
                 type="search"
-                placeholder="Find Organic Products.."
+                placeholder="Search AEM Services.."
                 id="example-search-input"
               />
             </div>
