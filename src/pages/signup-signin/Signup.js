@@ -171,7 +171,6 @@ function SignUp(props) {
               alt="First Slide"
             />
             <Carousel.Caption>
-              <p>We handle with Care</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -181,7 +180,6 @@ function SignUp(props) {
               alt="Second Slide"
             />
             <Carousel.Caption>
-              <p>Just order and wait for a while, we’ll be there at your door.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
