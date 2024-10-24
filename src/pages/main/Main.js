@@ -41,52 +41,6 @@ const Main = () => {
         <Route path="/profile" element={<Myprofile />} />
         <Route path="/aemAdmin" element={<AemAdmin />} />
         <Route path="/documentEditor" element={<DocumentEditor />} />
-        {/* <Route
-          path="/special"
-          element={
-            <SpecialDeals handleClick={handleClick} items={initProducts} />
-          }
-        /> */}
-        {/* <Route
-          path="/shop-online"
-          element={
-            <ShopOnline handleClick={handleClick} items={initProducts} />
-          }
-        /> */}
-        {/* <Route
-          path="/checkout"
-          element={
-            <Checkout
-              currentUserCartItems={currentUserCartItems}
-              currentUser={getActiveUser()}
-              handleCheckOutClick={handleCheckOutClick}
-              setInitProducts={setInitProducts}
-            />
-          }
-        /> */}
-        {/* <Route
-          path="/cart"
-          element={
-            <Cart currentUser={getActiveUser()} updateCartChanged={setItems} />
-          }
-        /> */}
-        {/* <Route
-          path="/product-page/:urlId"
-          element={
-            <ProductPage handleClick={handleClick} items={initProducts} />
-          }
-        /> */}
-        {/* <Route
-          path="/thankyou"
-          element={
-            <Thankyou
-              currentUser={getActiveUser()}
-              currentUserCartItems={currentUserCartItems}
-              clickCheckOut={clickCheckOut}
-              setItems={setItems}
-            />
-          }
-        /> */}
       </Routes>
       <Footer />
     </>
