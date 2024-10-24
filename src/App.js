@@ -77,6 +77,9 @@ const App = () => {
 
   return (
     <div className="main-container">
+      <div className="min-vh-100">
+        <Main />
+      </div>
       {/* Chat icon that toggles the entire widget */}
       {activePage !== 'messages' && (
         <div className="chat-toggle-button" onClick={() => setIsOpen(!isOpen)}>
@@ -94,9 +97,6 @@ const App = () => {
 
         {/* Footer navigation that allows switching between Home, Messages, and History */}
         <FooterNav setActivePage={setActivePage} />
-      </div>
-      <div className="min-vh-100">
-        <Main />
       </div>
     </div>
   );

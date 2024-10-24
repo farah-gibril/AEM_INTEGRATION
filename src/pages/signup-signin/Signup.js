@@ -71,6 +71,8 @@ function SignUp(props) {
     localStorage.setItem("activeUser", JSON.stringify(newUser)); // Set active user in localStorage
     setIsSignedUp(true); // Set sign-up status to true
 
+    window.dispatchEvent(new Event('resetChatbot'));
+
     const aemUser = {
       id: 967,
       name: "Don",
@@ -86,6 +88,9 @@ function SignUp(props) {
     }
     localStorage.setItem('aemUser', JSON.stringify(aemUser));
     console.log('aemUser saved to localStorage:', aemUser);
+    aemUser.name = newUser.name
+    aemUser.email = newUser.email
+    localStorage.setItem('aemUser', JSON.stringify(aemUser));
 
     // Redirect to home page after a short delay
     setTimeout(() => {

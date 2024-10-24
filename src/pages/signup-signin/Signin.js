@@ -24,7 +24,7 @@ function SignIn(props) {
     if (verifiedUser) {
       const aemUser = {
         id: 967,
-        name: "Don",
+        name: "Damian",
         lastName: "Abeynayake",
         email: "test@gmail",
         phone: "459340691",
@@ -39,6 +39,9 @@ function SignIn(props) {
       console.log('aemUser saved to localStorage:', aemUser);
 
       localStorage.setItem("activeUser", JSON.stringify(verifiedUser)); // Save active user to localStorage
+      aemUser.name = verifiedUser.name
+      aemUser.email = verifiedUser.email
+      localStorage.setItem('aemUser', JSON.stringify(aemUser));
 
       //CHATBOT - dialogflow code ammendments
       //localStorage.setItem('greetingDisplayed', 'false');
