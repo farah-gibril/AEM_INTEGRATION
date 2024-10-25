@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
+    "@google-cloud/aiplatform": "^3.31.0",
+    "@google-cloud/bigquery": "^7.9.1",
+    "@google-cloud/firestore": "^7.10.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -26,7 +29,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -46,5 +49,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "jest-fetch-mock": "^3.0.3",
+    "node-fetch": "^3.3.2"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "testEnvironment": "jsdom"
   }
 }
