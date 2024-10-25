@@ -73,6 +73,7 @@ function SignUp(props) {
 
     window.dispatchEvent(new Event('resetChatbot'));
 
+    //similar data extraction according to the aemalgorithm web application
     const aemUser = {
       id: 967,
       name: "Don",
