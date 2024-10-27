@@ -1,0 +1,266 @@
+
+/* Chat Window Styles */
+.chat-window {
+    position: fixed;  /* Keeps the chat window fixed */
+    bottom: 90px; 
+    right: 20px;
+    width: 423px; 
+    overflow: hidden;
+    background: linear-gradient(to bottom, #0A4777 40%, #FFFFFF 80%);
+    color: #000000;
+    border-radius: 18px;
+    padding: 20px; /* Ensures padding inside the chat window */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: height 0.4s ease, padding 0.3s ease-in-out;
+    box-sizing: border-box; /* Includes padding in the width and height calculations */
+  }
+  
+  .chat-window.open {
+    height: 472px; 
+    padding: 20px;
+  }
+  
+  .chat-window.closed {
+    height: 0; 
+    padding: 0;
+  }
+  
+  /* Chat Toggle Button (Minimize Button) Styles */
+  .chat-toggle-button {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #004F9F;
+    border-radius: 50%;
+    display: flex; /* Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .chat-icon {
+    width: 120px;
+    height: 120px; 
+  }
+  
+  .chat-toggle-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Header Section Styles */
+  .header {
+    display: flex;
+    top:10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    background-color: #0A4777;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+  }
+  .avatar-container {
+    width: 207.07px;
+    left:-60px;
+    top:-10px;
+    height: 203.75px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow: visible; 
+  }
+  
+  .avatar-image {
+    
+    width: 129.68px;  
+    height: 128px;  
+    object-fit: cover; 
+  }
+  
+  
+  /* Community Button */
+  .community-button {
+    display: flex;
+    padding: 10px 15px; 
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    background-color: #F0F8FC; /* Light background for the button */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    gap: 10px;
+    top: 0;  /* Adjust top positioning as necessary */
+    right: 10px;
+    position: absolute;
+    font-size: 14px;
+    color: #0A4777; /* Navy text color */
+  }
+  
+  
+  .community-button:hover {
+    background-color: #e0f7ff; /* Light blue background on hover */
+  }
+  
+  /* Community Button Text */
+  .community-button-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #0A4777;
+    line-height: 21px;
+    text-align: right;
+  }
+  
+  /* Community Button Icon */
+  .community-button-icon {
+    width: 15px;
+    height: 15px;
+  }
+  .greeting span.emoji {
+    margin-left: 6px; /* Space between text and emoji */
+    vertical-align: middle; /* Align emoji with the text */
+  }
+  
+  /* Greeting Styles */
+  .greeting h1 {
+    top:12px;
+    display:inline;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28.13px;
+    color: #F8F8F8;
+    margin-bottom: 2px;
+    opacity:0.8;
+  }
+  .emoji {
+    display: inline;
+    vertical-align: middle;
+  }
+  .greeting h1 span {
+    margin-left: 6px;  /* 6px gap between the text and the emoji */
+  }
+  
+  .greeting h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28.13px;
+    color: #F8F8F8;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom:12px;
+  }
+  
+  .subscription-card {
+    box-sizing: border-box; 
+    width: 383px; 
+    padding: 22px 24px; /* Internal padding for content */
+    margin-top: 12px; /* Space above card */
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .subscription-card-title, .subscription-card-text {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Ensure no additional padding */
+    width: 100%; /* Uses the full width of the parent’s padding */
+  }
+  
+  .subscription-card-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500; /* Medium weight */
+    line-height: 21px;
+    text-align: left;
+    color: #202020; /* Dark gray */
+    width: 318px; /* Set width */
+    margin: 0; /* Remove default margins */
+  }
+  
+  .subscription-card-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400; /* Normal weight */
+    line-height: 21px;
+    text-align: left;
+    color: #707070; /* Lighter gray */
+    width: 318px; /* Set width */
+    margin-top: 10px; /* Space between title and paragraph if needed */
+  }
+  
+  .footer-nav {
+    
+    width: 423px;  /* Set the exact width as specified */
+    min-height: 78px;  /* Set the minimum height as specified */
+    background-color: #FFFFFF;
+    border-top: 1px solid #F2F2F2;
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Ensures that the buttons are spaced evenly */
+    align-items: center;
+    padding: 18px 20px; /* Padding for top and bottom, left and right */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+    right: 0;
+    box-sizing: border-box;
+  }
+  
+  .nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #707070;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background: none;
+  }
+  
+  #home-button {
+    margin-left: 14px;  /* Home starts 14px from the left edge of the footer-nav */
+    color: var(--Blue, #048DC1);
+  
+  }
+  
+  #history-button {
+    margin-left: auto;  /*  History to the right */
+    margin-right: 14px;  /* History ends 14px from the right edge of the footer-nav */
+  }
+  
+  #messages-button {
+    flex-grow: 1;  
+    text-align: center;
+  }
+  
+  .nav-button:hover {
+    background-color: #F0F0F0; /* Hover effect for buttons */
+  }
+  
+  .footer-item img {
+    margin-bottom: 2px; /* Space between the icon and the text */
+    height: 20px; 
+  }
+  
+  .footer-item span {
+    line-height: 19.6px; 
+  }
+  

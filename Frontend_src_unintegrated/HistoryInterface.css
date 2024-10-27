@@ -1,0 +1,197 @@
+
+
+  .history-interface.closed {
+    height: 0; 
+    padding: 0;
+  }
+  .chat-icon {
+    width: 120px;
+    height: 120px; 
+  }
+  
+  .chat-toggle-button:hover {
+    transform: scale(1.1);
+  }
+.history-interface {
+    position: fixed;  
+    bottom: 90px; 
+    right: 20px;
+    width: 423px; 
+    overflow: hidden;
+    color: #000000;
+    border-radius: 18px;
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: height 0.4s ease, padding 0.3s ease-in-out;
+    box-sizing: border-box; 
+    height: 680px; 
+
+}
+.header-container {
+    width: 100%; /* Ensures the container spans the full width of its parent */
+    display: flex;
+    justify-content: center; /* Centers the header-frame horizontally */
+    position: relative; /* Establishes stacking context for pseudo-elements */
+    background: #FFFFFF; /* Optional: Set to match the background of the chat window */
+}
+
+.header-frame {
+    width: 100%; /* Adjusted to fit within the container */
+    min-height: 128px; /* Minimum height for visual consistency */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within the frame */
+    background: #FFFFFF; /* Background color of the header frame itself */
+    position: relative; /* Needed for pseudo-element positioning */
+    z-index: 1; /* Ensures the frame is above the pseudo-background */
+}
+
+.header-frame::before {
+    content: "";
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: 0px; /* Expands the pseudo-element around the frame */
+    z-index: -1; /* Places the background behind the frame */
+    background: linear-gradient(103.14deg, rgba(3, 65, 161, 0.784314) -12.23%, #22B7BB 99.35%);
+    border-radius: 6px 6px 0px 0px; /* Match the border-radius of your design preference */
+}
+
+
+
+
+.history-title {
+   
+    width: 100%; /* Fill the header frame width */
+    height: auto; /* Height to 'hug' content */
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #f8f8f8;
+    text-align: center;
+    margin-top: 10px; /* Margin to push down from top padding of the frame */
+    gap: 24px;
+    padding: 28px 0px 0px 0px; /* No additional padding to disrupt the alignment */
+}
+
+.history-search {
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 46px;
+    width: 90%;
+    border-radius: 8px;
+    background: var(--White, #FFF);
+    border: 1px solid #ccc;
+    box-sizing: border-box
+    
+}
+
+
+.export-button {
+    
+    font-size: 14px; /* Button text size */
+    color: #048DC1; /* Background color */
+    background: none; /* Removes any background */
+    border: none;
+    font-weight: 600;
+    
+    cursor: pointer; /* Pointer cursor on hover */
+}
+.conversations-frame {
+    display: flex;
+    right: 0px;
+    align-items: center; /* Centers the text and button vertically */
+    justify-content: space-between; /* Spreads out the child elements */
+    width: 423px; /* Fill width */
+    min-height: 61px; /* Minimum height to 'hug' content */
+    padding: 20px 20px; /* Adjusted horizontal padding for internal spacing */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    box-sizing: border-box;
+}
+.conversation-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+    color: var(--operator-message-text, #000000); /* Ensure text color is set */
+    flex: 1; /* Takes remaining space pushing the button to the end */
+}
+
+.conversations-container {
+    width: 423px;
+    height: 434px; /* Fixed height */
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto; /* Allows scrolling within the container */
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.history-entry{
+    width: 383px;
+    height:92px;
+    gap:16px;
+    box-sizing: border-box;
+}
+
+.footer-nav {
+    width: 423px;  
+    min-height: 78px;  
+    background-color: #FFFFFF;
+    border-top: 1px solid #F2F2F2;
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 18px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #707070;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background: none;
+}
+
+#home-button {
+    margin-left: 14px;
+    color: #048DC1;
+}
+
+#history-button {
+    margin-left: auto;
+    margin-right: 14px;
+}
+
+#messages-button {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background-color: #F0F0F0;
+}
+
+.footer-item img {
+    margin-bottom: 2px;
+    height: 20px;
+}
+
+.footer-item span {
+    line-height: 19.6px;
+}

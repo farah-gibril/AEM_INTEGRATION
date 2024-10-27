@@ -1,0 +1,19 @@
+.modal-container {
+    position: absolute; /* Relative to its nearest positioned ancestor */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white; /* Or any other fitting background */
+    overflow: auto; /* Enables scrolling within the container */
+    border-radius: 10px; /* Styling preference */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds depth */
+}
+
+.chat-interface {
+    position: relative; /* This sets the reference for absolute positioning within it */
+    height: 100%; /* Ensure it takes the height you expect in your layout */
+    width: 400px; /* Or whatever width your chat interface should be */
+    margin: auto; /* Centering it on the page if necessary */
+    border: 1px solid #ccc; /* Visual boundary */
+}
