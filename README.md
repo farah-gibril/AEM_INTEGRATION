@@ -1,81 +1,80 @@
-Overview
+<h1 align="center">AEM Mr Journaler Chatbot</h1> <h3 align="center">Seamless Integration of AI-Driven Chatbot with Google Cloud Platform</h3> <p align="center"> <img src="https://github.com/farah-gibril/AEM_INTEGRATION/blob/main/public/MrJournalerFront1.png" alt="AEM Integration Logo" width="300"/> </p> <p align="center"> <img src="https://img.shields.io/badge/Version-1.0.0-brightgreen.svg"/> <img src="https://img.shields.io/badge/License-MIT-blue.svg"/> <img src="https://img.shields.io/github/issues/farah-gibril/AEM_INTEGRATION"/> <img src="https://img.shields.io/github/stars/farah-gibril/AEM_INTEGRATION"/> </p>
 
+📝 Project Description
 
-This project is a standalone web application developed to integrate a custom chatbot for the AEM Algorithm platform. The chatbot is built using Google Cloud services like Vertex AI, Dialogflow CX, Firestore, BigQuery, and Google Cloud Storage. It provides users with support functionalities, such as automated responses, ticket creation, and real-time assistance. Developed using React.js with backend operations managed by Google Cloud Functions.
+The AEM Integration Project leverages Google Cloud Platform services like DialogFlow CX, Vertex AI, Firestore, BigQuery, and Google Cloud Storage to create a chatbot with rich features. This bot assists users on the website, managing queries and support ticket creation efficiently.
 
-Features
-🔹 Interactive Chatbot powered by Dialogflow CX and Vertex AI.
-🔹 Support Ticketing System with data storage in Firestore and BigQuery.
-🔹 Customizable Chat Interface with navigation for Home, Messages, and History.
-🔹 Real-Time Data Processing using Google Cloud services.
+👥 Team Members
+- Gibril Farah - **https://github.com/farah-gibril**
+- Don Thaveesha Abeynayake - **https://github.com/DonAbey**
+- Sai Vardhan Tanniru
+- Elissa Van
+- Andy Nguyen
 
-Dependencies
-React (v18.3.1), Bootstrap (v5.3.3), Styled-components, Axios
-Google Cloud Libraries:
-@google-cloud/aiplatform
-@google-cloud/bigquery
-@google-cloud/firestore
-Testing Libraries:
-Jest
-jest-fetch-mock
-@testing-library/react
-See package.json for a complete list.
+🚀 Features
 
-Project Structure
-|-- src
-|   |-- components
-|   |-- pages
-|   |-- fragments
-|   |-- App.js
-|   |-- index.js
-|-- __tests__
-|   |-- function tests
-|-- public
-|-- .gitignore
-|-- package.json
+- Dynamic Chatbot Integration with Dialogflow CX for user interaction.
+- Support Ticket Management with auto-classification and data storage in BigQuery.
+- User Authentication and customized greetings based on session data.
+- Real-Time Data Updates in Firestore for seamless data flow.
+- Frontend UI built with React.js and Bootstrap, hosted on Google Cloud Storage.
 
+📂 Project Structure
 
-Getting Started
-Clone Repository: git clone https://github.com/farah-gibril/AEM_INTEGRATION
+.
+├── src/
 
-Install Dependencies: npm install
+│   ├── components/
 
-Run Development Server: npm start
+│   ├── pages/
 
-Build for Production: npm run build
-This command creates a production-ready build in the build folder.
+│   ├── assets/
 
-Deploy:
-Upload build files to Google Cloud Storage.
-Configure Google Cloud Load Balancer with SSL and domain settings.
-deployed version: aemrmite.site
+│   └── App.js
 
+├── __tests__/        # Jest tests for cloud functions
 
-Deployment Steps
-Domain Registration: Purchased from GoDaddy as aemrmit.site.
-Google Cloud Bucket: Created and verified with domain for hosting.
-Load Balancer Configuration:
-Type: Application Load Balancer
-Frontend Config: HTTP & HTTPS with SSL certificate.
-Domain Integration: Connect domain via GoDaddy DNS settings.
+├── public/
 
-Group Information
-Group Number: P000194SE
+│   └── index.html
 
-Members:
-Gibril Farah - s3895509
-Don Thaveesha Abeynayake - s3981218 (GitHub)
-Sai Vardhan Tanniru - s3967375
-Elissa Van - s3935201
-Andy Nguyen - s4000849
+└── README.md
 
-Project Sponsor: Jakub Sawczuk, Founder/CEO of AEM Algorithm
-AEM Algorithm Website
+🛠️ Technologies & Dependencies
 
-Project Supervisor: Dr. Prabha Rajagopal
+{
+  "@google-cloud/aiplatform": "^3.31.0",
 
-Acknowledgements
-We would like to thank:
-Project Sponsor: AEM Algorithm for support and guidance.
-Google Cloud Technical Team: For their assistance with cloud integration.
-Project Supervisor: Dr. Prabha Rajagopal for mentorship.
+  "@google-cloud/bigquery": "^7.9.1",
+
+  "@google-cloud/firestore": "^7.10.0",
+  
+  "axios": "^1.7.5",
+  "react": "^18.3.1",
+  
+  "bootstrap": "^5.3.3",
+  
+  "styled-components": "^6.1.12",
+  
+  "jest": "^27.5.1",
+  
+  "node-fetch": "^3.3.2"
+  
+}
+
+🌐 Deployment
+
+- Domain: Secured from GoDaddy - **https://aemrmit.site**
+- Google Cloud Storage: Configured to host frontend build files.
+- Load Balancer: Set up for HTTP and HTTPS traffic with Google-managed SSL.
+- DNS Configuration: Pointed to Google Cloud Load Balancer IP through GoDaddy.
+
+🧪 Testing
+
+- Unit Tests: Implemented with Jest for cloud functions, covering endpoint responses and error handling.
+- Manual Testing: Conducted to ensure chatbot responses and data flow align with project requirements.
+
+🎉 Acknowledgments
+
+Special thanks to Jakub Sawczuk (AEM Algorithm) and Dr. Prabha Rajagopal (Project Supervisor) for their support and guidance.
+
